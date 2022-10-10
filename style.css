@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  padding:0 20% 0 20%;
 }
 .nav-item li {
   list-style-type: none;
@@ -40,7 +40,6 @@
   font-size: var(--base-font-size);
   font-family: var(--base-font);
   color: var(--base-color);
-  
 }
 .logo {
   font-family: "Pacifico", cursive;
@@ -62,7 +61,6 @@
   justify-content: center;
   cursor: pointer;
   display: none;
- 
 }
 .hamburger,
 .hamburger::before,
@@ -87,46 +85,44 @@
 .hamburger-checkbox {
   display: none;
 }
-.hamburger-checkbox:checked ~ .action-menu .hamburger{
+.hamburger-checkbox:checked ~ .action-menu .hamburger {
   background: rgba(255, 255, 255, 0);
 }
-.hamburger-checkbox:checked ~ .action-menu .hamburger::before{
+.hamburger-checkbox:checked ~ .action-menu .hamburger::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
-.hamburger-checkbox:checked ~ .action-menu .hamburger::after{
+.hamburger-checkbox:checked ~ .action-menu .hamburger::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
 @media (max-width: 500px) {
-
-   .action-menu{
+  .action-menu {
     display: flex;
-
-   }
-   .nav-item{
-    position:absolute;
+  }
+  .nav-item {
+    position: absolute;
     background-color: var(--base-background);
-    width:100%;
-    margin-top:10vh;
+    width: 100%;
+    margin-top: 10vh;
     display: none;
     flex-direction: column;
-    top:0;
-    left:0;
-    
+    top: 0;
+    left: 0;
   }
   .nav-item li {
     border-top: 1px solid var(--base-color);
-    width:100%;
+    width: 100%;
     text-align: center;
-    margin-right:0px;
-    height:0;
+    margin-right: 0px;
+    height: 0;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-   .hamburger-checkbox:checked ~ .nav-item {
-    display:flex;
+  .hamburger-checkbox:checked ~ .nav-item {
+    display: flex;
     background-color: var(--base-background);
   }
-  .hamburger-checkbox:checked ~ .nav-item {}
+  .hamburger-checkbox:checked ~ .nav-item {
+  }
 }
