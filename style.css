@@ -9,22 +9,32 @@
   --base-color: brown;
   --base-font: "Lato", sans-serif;
   --base-font-size: 1.2rem;
-  --base-background: rgb(14, 13, 13);
+  --base-background: hsla(0, 0%, 4%, 0.678);
 }
+
 
 .menu-bar {
   height: 10vh;
   background-color: var(--base-background);
-  width: 100%;
+  backdrop-filter: blur(2px);
+  width: 60%;
   position: fixed;
+  margin: 0 20% 0 20%;
   top: 0;
+  
+}
+.hero {
+  background-image: url(./images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 1rem;
 }
 .nav-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* margin: auto; */
   height: 100%;
 }
 
@@ -96,6 +106,7 @@
   margin-top: 0px;
   transform: rotate(-405deg);
 }
+
 @media (max-width: 500px) {
   .action-menu {
     display: flex;
