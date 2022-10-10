@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --base-color: brown;
+  --base-font: "Lato", sans-serif;
+  --base-font-size: 1.2rem;
+  --base-background: rgb(14, 13, 13);
+}
+
+.menu-bar {
+  height: 10vh;
+  background-color: var(--base-background);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: auto; */
+  height: 100%;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.nav-item li {
+  list-style-type: none;
+  margin-right: 1rem;
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
+  color: var(--base-color);
+  
+}
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 4vh;
+  font-weight: bold;
+  color: var(--base-color);
+  margin-left: 2rem;
+}
+.action-menu {
+  position: relative;
+  background-color: var(--base-background);
+  font-size: var(--base-font-size);
+  color: var(--base-color);
+  height: 100%;
+  width: 5vw;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+ 
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  position: absolute;
+  background-color: var(--base-color);
+  height: 4px;
+  width: 40px;
+  border-radius: 2px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger::before {
+  content: "";
+  margin-top: -8px;
+}
+.hamburger::after {
+  content: "";
+  margin-top: 8px;
+}
+
+.hamburger-checkbox {
+  display: none;
+}
+.hamburger-checkbox:checked ~ .action-menu .hamburger{
+  background: rgba(255, 255, 255, 0);
+}
+.hamburger-checkbox:checked ~ .action-menu .hamburger::before{
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+.hamburger-checkbox:checked ~ .action-menu .hamburger::after{
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+@media (max-width: 500px) {
+
+   .action-menu{
+    display: flex;
+
+   }
+   .nav-item{
+    position:absolute;
+    background-color: var(--base-background);
+    width:100%;
+    margin-top:10vh;
+    display: none;
+    flex-direction: column;
+    top:0;
+    left:0;
+    
+  }
+  .nav-item li {
+    border-top: 1px solid var(--base-color);
+    width:100%;
+    text-align: center;
+    margin-right:0px;
+    height:0;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+   .hamburger-checkbox:checked ~ .nav-item {
+    display:flex;
+    background-color: var(--base-background);
+  }
+  .hamburger-checkbox:checked ~ .nav-item {}
+}
