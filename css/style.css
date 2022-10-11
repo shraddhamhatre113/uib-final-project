@@ -177,8 +177,8 @@ section {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 5px 5px 0px 0px #ffa500, 10px 10px 0px 0px #ffb732,
-    15px 15px 0px 0px #ffc04c, 20px 20px 0px 0px #ffd27f,
-    25px 25px 0px 0px #ffe4b2, 5px 5px 15px 5px rgba(255, 255, 255, 0);
+    15px 15px 0px 0px #ffc04c,
+     5px 5px 15px 5px rgb(14, 13, 12);
 }
 .container div:nth-of-type(even) {
   margin-top: 15rem;
@@ -189,7 +189,7 @@ section {
 .container div img {
   height: 100%;
   width: 100%;
-  transform: scale(1.5);
+
 }
 .about-text * {
   position: relative;
@@ -216,9 +216,7 @@ section {
   color: #777777;
   line-height: 24px;
 }
-.about-text button {
-  margin-left: 1rem;
-}
+
 .specialty {
   background-color: white;
   color: white;
@@ -279,8 +277,19 @@ section {
 }
 
 .card-header {
+  position: relative;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;;
+}
+.card-header:before {
+  position: absolute;
+  height: 2px;
+  width: 45px;
+  background-color: #ff8a00;
+  content: "";
+  bottom: 0;
+
 }
 .card-details {
   font-size: 0.8rem;
