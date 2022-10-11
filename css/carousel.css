@@ -10,7 +10,7 @@
   width:400%;
   height:100%;
   position:relative;
-  animation:slide 21s infinite;
+  animation:slide 30s infinite;
 }
 .slider{
   width:25%;
@@ -54,13 +54,13 @@
   overflow:hidden;
 }
 .content-txt{
-  width:550px;
+  width:600px;
   height:150px;
   float:left;
   position:relative;
-  top:300px;
+  top:400px;
   margin-left:15%;
-  animation:content-s 7s infinite;
+  animation:content-s 9.5s infinite;
 }
 .content-txt h1{
   font-family:Arial;
@@ -70,11 +70,12 @@
   text-align:left;
   margin-left:30px;
   padding-bottom:10px;
+  font-style: italic;
 }
 .content-txt h2{
   font-family:arial;
   font-weight:normal;
-  font-size:14px;
+  font-size:24px;
   font-style:italic;
   color:#fff;
   text-align:left;
@@ -115,7 +116,7 @@
   border-radius:50%;
   background:#f39c12;
   position:relative;
-  animation:on 21s infinite;
+  animation:on 30s infinite;
 }
 
 /* Animation */
