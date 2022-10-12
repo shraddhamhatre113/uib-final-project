@@ -576,4 +576,11 @@ form {
     text-align: center;
     padding: 10px;
   }
+  .section-watermark {
+    font-size: 58px;
+  }
+  .section-name {
+    padding: 12px 0px;
+  
+  }
 }
