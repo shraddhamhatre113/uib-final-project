@@ -161,30 +161,8 @@
     margin-left:30px;
   }
 }
-@media (max-width: 500px) {
-  
-  .legend{
-    border:170px solid transparent;
-    border-left:200px solid rgba(52, 73, 94, .7);
-    border-bottom:0;
-    position:absolute;
-    bottom:0;
-  }
-  .content-txt{
-    width:300px;
-  }
-  .content-txt h1{
-    font-size:32px;
-    
-  }
-}
-@media (min-width:501px) {
-  .image{
-    width:100%;
-    height:100%;
-  }
-  .image img{
-    width:100%;
-    height:100%;
-  }
-}
+
+
+
+
+/* Small screen devices (600px and above) */
